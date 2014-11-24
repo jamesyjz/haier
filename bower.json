@@ -1,0 +1,20 @@
+{
+  "name": "haier",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jamesyjz/Haier",
+  "authors": [
+    "James Yang <james.yang@nurun.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.1"
+  }
+}

@@ -265,17 +265,17 @@ $icons-spacing: 10px;
 	.j-hr-wrap7{
 		.con7-title{
 			@include size(229px, 65px);
-			top: percentage(55px/1136px);
+			top: percentage(135px/1136px);
 			margin-left: -114px;
 		}
 		.con7-leftmobile{
 			@include size(117px, 240px);
-			top: percentage(248px/1136px);
+			top: percentage(328px/1136px);
 			margin-left: -110px;
 		}
 		.con7-rightmobile{
 			@include size(111px, 218px);
-			top: percentage(278px/1136px);
+			top: percentage(358px/1136px);
 			margin-left: -10px;
 		}
 		.con7-download-wrap{

@@ -6,36 +6,6 @@
 @import "compass/reset";
 @import "compass/css3";
 
-//get-sprite
-$icons-spacing: 10px;
-// @import "icons/*.png";
-
-@mixin get-sprite( $map, $sprite, $x2: false, $adjustX: 0, $adjustY: 0, $positionAdjustY: 0, $repeat: no-repeat ) {
-  //For use in media queries. Regular @import <dir>-sprite(file-name) does not fully work.
-  $sprite-image: sprite-file( $map, $sprite );
-  $sprite-map: sprite-url( $map );
-  $sprite-position: sprite-position( $map, $sprite );
-
-  //return background
-  background: $sprite-map $sprite-position $repeat;
-
-  $div: 1;
-
-  @if $x2 == true {
-    $div: 2;
-    $map-path: sprite-path( $map );
-    @include background-size( ceil( image-width( $map-path )/$div ) auto);
-    //return position to override above position returned in 'background:'
-    background-position: nth( $sprite-position, 1 ) ( ( nth($sprite-position, 2 )+( $adjustY*2 ) )/$div )-$positionAdjustY;
-  }
-
-  $sprite-width: image-width( $sprite-image );
-  $sprite-height: image-height( $sprite-image );
-  //return width
-  width: ( $sprite-width/$div )+$adjustX;
-  //return height
-  height: ( $sprite-height/$div )+$adjustY;
-}
 @mixin absolute($top:auto, $right:auto, $bottom:auto, $left:auto) {
   position: absolute;
   left: $left;
@@ -76,13 +46,25 @@ $icons-spacing: 10px;
 	width: 100%;
 	height: 100%;
 	min-width: 320px;
-	min-height: 416px;
+	min-height: 416px; 
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
 	background: #fff;
 	font-family: Arial, '微软雅黑';
 	img{
 		width: 100%;
+	}
+	.opacity0{
+		opacity: 0;
+	}
+	.opacity1{
+		
+	}
+	.animated{
+		opacity: 1;
+		-webkit-transition: all 0.85s linear;
+		-moz-transition: all 0.85s linear;
+		transition: all 0.85s linear;
 	}
 	.j-hr-wrap{
 		width: 100%;
@@ -97,42 +79,38 @@ $icons-spacing: 10px;
 	}
 	.common-hand{
 		@include size(47px, 102px);
-		top: percentage(850px/1136px);
+		top: percentage(950px/1136px);
 		margin-left: 74px;
+		&.animated{
+			top: percentage(850px/1136px);
+		}
 	}
 	.j-hr-wrap1{
 		background: #50c1e9;
-		height: percentage(664px/1136px);
-		min-height: 332px;
+		height: 258px;
+		min-height: 258px;
 		.hr-logo{
 			@include size(116px, 112px);
-			top: percentage(46px/664px);
-			margin-left: -58px;
+			top: percentage(46px/516px);
+			margin-left: -158px;
+			&.animated{
+				margin-left: -58px;
+			}
 		}
 		.con1-title{
 			@include size(276px, 15px);
-			top: percentage(290px/664px);
-			margin-left: -138px;
+			top: percentage(290px/516px);
+			margin-left: 38px;
+			&.animated{
+				margin-left: -138px;
+			}
 		}
 		.hr-download{
 			@include size(148px, 48px);
-			top: percentage(368px/664px);
+			top: percentage(268px/516px);
 			margin-left: -74px;
-		}
-		#j-godown{
-			width: 100%;
-			height: 75px;
-			background: #fff;
-			position: absolute;
-			left: 0;
-			top: percentage(515px/664px);
-			.icon-godown{
-				@include size(30px, 30px);
-				border: 1px solid #50c1e9;
-				border-top: none;
-				border-left: none;
-				@include transform(rotate(45deg));
-				margin: 15px auto;
+			&.animated{
+				top: percentage(368px/516px);
 			}
 		}
 	}
@@ -145,13 +123,21 @@ $icons-spacing: 10px;
 		}
 		.con2-products{
 			@include size(238px, 246px);
-			top: percentage(253px/1136px);
-			margin-left: -119px;
+			top: percentage(200px/1136px);
+			margin-left: -79px;
+			&.animated{
+				top: percentage(253px/1136px);
+				margin-left: -119px;
+			}
 		}
 		.con2-shopping-cart{
 			@include size(46px, 33px);
-			top: percentage(747px/1136px);
-			margin-left: -83px;
+			top: percentage(847px/1136px);
+			margin-left: -103px;
+			&.animated{
+				top: percentage(747px/1136px);
+				margin-left: -83px;
+			}
 		}
 	}
 
@@ -163,8 +149,11 @@ $icons-spacing: 10px;
 		}
 		.con3-gift{
 			@include size(290px, 305px);
-			top: percentage(175px/1136px);
-			margin-left: -145px;
+			top: percentage(85px/1136px);
+			margin-left: -131px;
+			&.animated{
+				top: percentage(175px/1136px);
+			}
 		}
 	}
 
@@ -179,15 +168,29 @@ $icons-spacing: 10px;
 			top: percentage(235px/1136px);
 			margin-left: -102px;
 		}
+		.con4-dianbingxiang{
+			@include size(50px, 75px);
+			top: percentage(295px/1136px);
+			margin-left: -103px;
+			&.animated{
+				top: percentage(235px/1136px);
+			}
+		}
 		.con4-car{
 			@include size(62px, 31px);
 			top: percentage(519px/1136px);
-			margin-left: -90px;
+			margin-left: -40px;
+			&.animated{
+				margin-left: -90px;
+			}
 		}
 		.con4-round{
 			@include size(43px, 46px);
 			top: percentage(660px/1136px);
 			margin-left: -19px;
+			&.animated{
+				@include transform(rotate(180deg));
+			}
 		}
 		.con4-round-count{
 			@include size(43px, 46px);
@@ -206,6 +209,12 @@ $icons-spacing: 10px;
 			@include size(251px, 240px);
 			top: percentage(253px/1136px);
 			margin-left: -125px;
+			&.animated{
+				@include transform(rotate(360deg));
+				-webkit-transition: all 1.25s linear;
+				-moz-transition: all 1.25s linear;
+				transition: all 1.25s linear;
+			}
 		}
 		.con5-blueline{
 			@include size(251px, 240px);
@@ -215,17 +224,26 @@ $icons-spacing: 10px;
 		.con5-dianbingxiang{
 			@include size(50px, 75px);
 			top: percentage(333px/1136px);
-			margin-left: -34px;
+			margin-left: -66px;
+			&.animated{
+				margin-left: -46px;
+			}
 		}
 		.con5-money{
 			@include size(31px, 34px);
 			top: percentage(482px/1136px);
-			margin-left: 23px;
+			margin-left: 43px;
+			&.animated{
+				margin-left: 23px;
+			}
 		}
 		.con5-gift{
 			@include size(36px, 39px);
-			top: percentage(535px/1136px);
+			top: percentage(635px/1136px);
 			margin-left: -43px;
+			&.animated{
+				top: percentage(535px/1136px);
+			}
 		}
 	}
 
@@ -242,23 +260,39 @@ $icons-spacing: 10px;
 		}
 		.con6-diandengpao{
 			@include size(45px, 47px);
-			top: percentage(306px/1136px);
-			margin-left: -121px;
+			top: percentage(206px/1136px);
+			margin-left: -141px;
+			&.animated{
+				top: percentage(306px/1136px);
+				margin-left: -121px;
+			}
 		}
 		.con6-jiaoliu{
 			@include size(36px, 46px);
-			top: percentage(248px/1136px);
-			margin-left: 61px;
+			top: percentage(188px/1136px);
+			margin-left: 81px;
+			&.animated{
+				top: percentage(248px/1136px);
+				margin-left: 61px;
+			}
 		}
 		.con6-shuju{
 			@include size(40px, 30px);
-			top: percentage(623px/1136px);
-			margin-left: -112px;
+			top: percentage(723px/1136px);
+			margin-left: -132px;
+			&.animated{
+				top: percentage(623px/1136px);
+				margin-left: -112px;
+			}
 		}
 		.con6-wenhao{
 			@include size(31px, 43px);
-			top: percentage(593px/1136px);
-			margin-left: 75px;
+			top: percentage(653px/1136px);
+			margin-left: 95px;
+			&.animated{
+				top: percentage(593px/1136px);
+				margin-left: 75px;
+			}
 		}
 	}
 
@@ -271,12 +305,18 @@ $icons-spacing: 10px;
 		.con7-leftmobile{
 			@include size(117px, 240px);
 			top: percentage(328px/1136px);
-			margin-left: -110px;
+			margin-left: -140px;
+			&.animated{
+				margin-left: -110px;
+			}
 		}
 		.con7-rightmobile{
 			@include size(111px, 218px);
 			top: percentage(358px/1136px);
-			margin-left: -10px;
+			margin-left: 30px;
+			&.animated{
+				margin-left: -10px;
+			}
 		}
 		.con7-download-wrap{
 			@include size(100%, 118px);
@@ -292,6 +332,23 @@ $icons-spacing: 10px;
 			}
 		}
 	}
+
+	#j-godown{
+			width: 100%;
+			height: 75px;
+			background: #fff;
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			.icon-godown{
+				@include size(30px, 30px);
+				border: 1px solid #50c1e9;
+				border-top: none;
+				border-left: none;
+				@include transform(rotate(45deg));
+				margin: 15px auto;
+			}
+		}
 
 }
 

@@ -69,7 +69,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 100%;
   height: 100%;
   min-width: 320px;
-  min-height: 416px;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   background: #fff;
@@ -110,13 +109,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 .j-main-wrap .j-hr-wrap1 {
   background: #50c1e9;
-  height: 258px;
-  min-height: 258px;
 }
 .j-main-wrap .j-hr-wrap1 .hr-logo {
   width: 116px;
   height: 112px;
-  top: 8.91473%;
+  top: 16.66667%;
   margin-left: -158px;
 }
 .j-main-wrap .j-hr-wrap1 .hr-logo.animated {
@@ -125,7 +122,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .j-main-wrap .j-hr-wrap1 .con1-title {
   width: 276px;
   height: 15px;
-  top: 56.20155%;
+  top: 44.57364%;
   margin-left: 38px;
 }
 .j-main-wrap .j-hr-wrap1 .con1-title.animated {
@@ -138,7 +135,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-left: -74px;
 }
 .j-main-wrap .j-hr-wrap1 .hr-download.animated {
-  top: 71.31783%;
+  top: 57.75194%;
 }
 .j-main-wrap .j-hr-wrap2 .con2-title {
   width: 181px;

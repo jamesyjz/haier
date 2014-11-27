@@ -64,9 +64,5 @@ $(function(){
  //        loop: true
  //    });
   
-  //GA
-  $('#j-main-wrap .btn-dld').bind('click', function(){
-    _smq.push(['custom','海尔生活家APP推广','Haier-立即下载button']);
-  });
 
 });

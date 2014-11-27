@@ -38,7 +38,7 @@ var gulp = require('gulp')
 // Watch
 gulp.task('watch', function() {
   watch([
-    './css/*.css',
+    './images/*.css',
     './*.html'
   ], function(files) {
     return files
@@ -47,7 +47,7 @@ gulp.task('watch', function() {
   });
 
   // for js
-  watch('./js/*.js', function(files) {
+  watch('./images/*.js', function(files) {
     return files
       .pipe(plumber())
       .pipe(filter('*.js'))

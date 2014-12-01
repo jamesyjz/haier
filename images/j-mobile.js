@@ -12,7 +12,7 @@ $(function(){
     $('#j-main-wrap .btn-dld').attr('href', ANDROIDURL);
   }
 
-  if(UA.indexOf('iphone') != -1 && UA.indexOf('micromessenger') != -1) {
+  if(UA.indexOf('iphone') != -1 && UA.indexOf('micromessenger') != -1 || UA.indexOf('android') != -1 && UA.indexOf('micromessenger') != -1) {
     $('#j-mask').show();
   }
   
@@ -50,24 +50,16 @@ $(function(){
     }
   });
 
-  // $(window).bind('scroll', function(){
-  //   for(var i=0; i<$elems.length;i++) {
-  //      if ($(window).scrollTop() > winheight * i + (winheight / 2) ){
-  //         $elems.eq(i).children('.common-hand').addClass('re-animated');
-  //      }  
-  //   };
-  // })
-  
 
- // $("#j-main-wrap").onepage_scroll({
- //        sectionContainer: "section",
- //        loop: true
- //    });
-  
 
   //GA
   $('#j-main-wrap .btn-dld').bind('click', function(){
     _smq.push(['custom','海尔生活家APP推广','Haier-立即下载button']);
   });
+
+  $('#j-godown').bind('click', function(){
+    _smq.push(['custom','海尔生活家APP推广','Haier-进入下一页箭头']);
+  })
+
 
 });

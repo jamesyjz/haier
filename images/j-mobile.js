@@ -12,47 +12,62 @@ $(function(){
     $('#j-main-wrap .btn-dld').attr('href', ANDROIDURL);
   }
 
-  if(UA.indexOf('iphone') != -1 && UA.indexOf('micromessenger') != -1 || UA.indexOf('android') != -1 && UA.indexOf('micromessenger') != -1) {
+  if(UA.indexOf('iphone') != -1 && UA.indexOf('micromessenger') != -1) {
     $('#j-mask').show();
   }
-
+  
   $('.hr-logo, .con1-title, .hr-download').addClass('animated');
 
-  var mySwiper = new Swiper('.swiper-container',{
-    //Your options here:
-    mode:'vertical',
-    //etc..
-    onSlideChangeStart : function(index) {
-      //Do something when you touch the slide
-      if($('.j-hr-wrap1').hasClass('swiper-slide-visible')){
-        $('#j-godown').fadeIn(1000);
-      }else{
-        $('#j-godown').fadeOut(1000);
-      }
-      if($('.j-hr-wrap2').hasClass('swiper-slide-visible')){
-        $('.con2-products, .con2-shopping-cart, .j-hr-wrap2 .common-hand').addClass('animated');
-      }
-      if($('.j-hr-wrap3').hasClass('swiper-slide-visible')){
-        $('.con3-gift, .j-hr-wrap3 .common-hand').addClass('animated');
-      }
-      if($('.j-hr-wrap4').hasClass('swiper-slide-visible')){
-        $('.con4-dianbingxiang, .con4-car, .con4-round, .j-hr-wrap4 .common-hand').addClass('animated');
-      }
-      if($('.j-hr-wrap5').hasClass('swiper-slide-visible')){
-        $('.con5-dianbingxiang, .con5-money, .con5-gift, .con5-round, .j-hr-wrap5 .common-hand').addClass('animated');
-      }
-      if($('.j-hr-wrap6').hasClass('swiper-slide-visible')){
-        $('.con6-diandengpao, .con6-jiaoliu, .con6-shuju, .con6-wenhao, .j-hr-wrap6 .common-hand').addClass('animated');
-      }
-      if($('.j-hr-wrap7').hasClass('swiper-slide-visible')){
-        $('.con7-leftmobile, .con7-rightmobile, .j-hr-wrap7 .common-hand').addClass('animated');
-      }
+  $('.j-hr-wrap2').waypoint(function(){
+    $('.con2-products, .con2-shopping-cart, .j-hr-wrap2 .common-hand').addClass('animated');
+  }, {offset: 150});
+
+  $('.j-hr-wrap3').waypoint(function(){
+    $('.con3-gift, .j-hr-wrap3 .common-hand').addClass('animated');
+  }, {offset: 150});
+
+  $('.j-hr-wrap4').waypoint(function(){
+    $('.con4-dianbingxiang, .con4-car, .con4-round, .j-hr-wrap4 .common-hand').addClass('animated');
+  }, {offset: 150});
+
+  $('.j-hr-wrap5').waypoint(function(){
+    $('.con5-dianbingxiang, .con5-money, .con5-gift, .con5-round, .j-hr-wrap5 .common-hand').addClass('animated');
+  }, {offset: 150});
+
+  $('.j-hr-wrap6').waypoint(function(){
+    $('.con6-diandengpao, .con6-jiaoliu, .con6-shuju, .con6-wenhao, .j-hr-wrap6 .common-hand').addClass('animated');
+  }, {offset: 150});
+
+  $('.j-hr-wrap7').waypoint(function(){
+    $('.con7-leftmobile, .con7-rightmobile, .j-hr-wrap7 .common-hand').addClass('animated');
+  }, {offset: 150});
+
+  $(window).bind('touchmove', function(){
+    if(($(window).scrollTop()) > 0){
+      $('#j-godown').fadeOut(1000);
+    }else{
+      $('#j-godown').fadeIn(1000);
     }
   });
 
-  $('#j-godown').bind('click', function(){
-    mySwiper.swipeNext();
-  })
+  // $(window).bind('scroll', function(){
+  //   for(var i=0; i<$elems.length;i++) {
+  //      if ($(window).scrollTop() > winheight * i + (winheight / 2) ){
+  //         $elems.eq(i).children('.common-hand').addClass('re-animated');
+  //      }  
+  //   };
+  // })
+  
 
+ // $("#j-main-wrap").onepage_scroll({
+ //        sectionContainer: "section",
+ //        loop: true
+ //    });
+  
+
+  //GA
+  $('#j-main-wrap .btn-dld').bind('click', function(){
+    _smq.push(['custom','海尔生活家APP推广','Haier-立即下载button']);
+  });
 
 });

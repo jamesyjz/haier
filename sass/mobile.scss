@@ -1,0 +1,406 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+
+@mixin absolute($top:auto, $right:auto, $bottom:auto, $left:auto) {
+  position: absolute;
+  left: $left;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+}
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin clearfix{
+  *zoom: 1;
+  &:before, &:after{
+    display: table;
+    line-height: 0;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+@mixin transform($transform...) {
+  -webkit-transform: $transform;
+      -ms-transform: $transform;
+          transform: $transform;
+}
+
+
+/*------style------*/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.position_a{
+	position: absolute;
+	left: 50%;
+}
+
+.j-main-wrap{
+	width: 100%;
+	height: 100%;
+	min-width: 320px;
+	min-height: 416px; 
+    -webkit-overflow-scrolling: touch;
+	background: #fff;
+	font-family: Arial, '微软雅黑';
+	.swiper-container, .swiper-slide{
+		width: 100%;
+		height: 100%;
+	}
+	img{
+		width: 100%;
+	}
+	.opacity0{
+		opacity: 0;
+	}
+	.opacity1{
+		
+	}
+	.animated{
+		opacity: 1;
+		-webkit-transition: all 0.85s linear;
+		-moz-transition: all 0.85s linear;
+		transition: all 0.85s linear;
+	}
+	.j-hr-wrap{
+		width: 100%;
+		height: 100%;
+		//min-height: 568px;
+		position: relative;
+	}
+	.common-mobile{
+		@include size(51px, 96px);
+		top: percentage(840px/1136px);
+		margin-left: 60px;
+	}
+	.common-hand{
+		@include size(47px, 102px);
+		top: percentage(950px/1136px);
+		margin-left: 74px;
+		&.animated{
+			top: percentage(918px/1136px);
+		}
+		&.re-animated{
+			opacity: 0;
+			top: percentage(950px/1136px);
+		}
+	}
+	// .j-hr-wrap1{
+	// 	background: #50c1e9;
+	// 	height: 258px;
+	// 	min-height: 258px;
+	// 	.hr-logo{
+	// 		@include size(116px, 112px);
+	// 		top: percentage(46px/516px);
+	// 		margin-left: -158px;
+	// 		&.animated{
+	// 			margin-left: -58px;
+	// 		}
+	// 	}
+	// 	.con1-title{
+	// 		@include size(276px, 15px);
+	// 		top: percentage(290px/516px);
+	// 		margin-left: 38px;
+	// 		&.animated{
+	// 			margin-left: -138px;
+	// 		}
+	// 	}
+	// 	.hr-download{
+	// 		@include size(148px, 48px);
+	// 		top: percentage(268px/516px);
+	// 		margin-left: -74px;
+	// 		&.animated{
+	// 			top: percentage(368px/516px);
+	// 		}
+	// 	}
+	// }
+
+	.j-hr-wrap1{
+		background: #50c1e9;
+		.hr-logo{
+			@include size(116px, 112px);
+			top: percentage(86px/516px);
+			margin-left: -158px;
+			&.animated{
+				margin-left: -58px;
+			}
+		}
+		.con1-title{
+			@include size(276px, 15px);
+			top: percentage(230px/516px);
+			margin-left: 38px;
+			&.animated{
+				margin-left: -138px;
+			}
+		}
+		.hr-download{
+			@include size(148px, 48px);
+			top: percentage(268px/516px);
+			margin-left: -74px;
+			&.animated{
+				top: percentage(298px/516px);
+			}
+		}
+	}
+
+	.j-hr-wrap2{
+		.con2-title{
+			@include size(181px, 65px);
+			top: percentage(56px/1136px);
+			margin-left: -90px;
+		}
+		.con2-products{
+			@include size(238px, 246px);
+			top: percentage(200px/1136px);
+			margin-left: -79px;
+			&.animated{
+				top: percentage(273px/1136px);
+				margin-left: -119px;
+			}
+		}
+		.con2-shopping-cart{
+			@include size(46px, 33px);
+			top: percentage(907px/1136px);
+			margin-left: -103px;
+			&.animated{
+				top: percentage(827px/1136px);
+				margin-left: -83px;
+			}
+		}
+	}
+
+	.j-hr-wrap3{
+		.con3-title{
+			@include size(262px, 47px);
+			top: percentage(55px/1136px);
+			margin-left: -131px;
+		}
+		.con3-gift{
+			@include size(290px, 305px);
+			top: percentage(85px/1136px);
+			margin-left: -131px;
+			&.animated{
+				top: percentage(175px/1136px);
+			}
+		}
+	}
+
+	.j-hr-wrap4{
+		.con4-title{
+			@include size(277px, 65px);
+			top: percentage(55px/1136px);
+			margin-left: -138px;
+		}
+		.con4-gift-bg{
+			@include size(204px, 297px);
+			top: percentage(235px/1136px);
+			margin-left: -102px;
+		}
+		.con4-dianbingxiang{
+			@include size(50px, 75px);
+			top: percentage(295px/1136px);
+			margin-left: -103px;
+			&.animated{
+				top: percentage(235px/1136px);
+			}
+		}
+		.con4-car{
+			@include size(62px, 31px);
+			top: percentage(539px/1136px);
+			margin-left: -40px;
+			&.animated{
+				margin-left: -90px;
+			}
+		}
+		.con4-round{
+			@include size(43px, 46px);
+			top: percentage(690px/1136px);
+			margin-left: -19px;
+			&.animated{
+				@include transform(rotate(180deg));
+			}
+		}
+		.con4-round-count{
+			@include size(43px, 46px);
+			top: percentage(690px/1136px);
+			margin-left: -19px;
+		}
+	}
+
+	.j-hr-wrap5{
+		.con5-title{
+			@include size(263px, 48px);
+			top: percentage(55px/1136px);
+			margin-left: -131px;
+		}
+		.con5-round{
+			@include size(251px, 240px);
+			top: percentage(253px/1136px);
+			margin-left: -125px;
+			&.animated{
+				@include transform(rotate(360deg));
+				-webkit-transition: all 1.25s linear;
+				-moz-transition: all 1.25s linear;
+				transition: all 1.25s linear;
+			}
+		}
+		.con5-blueline{
+			@include size(251px, 240px);
+			top: percentage(253px/1136px);
+			margin-left: -125px;
+		}
+		.con5-dianbingxiang{
+			@include size(50px, 75px);
+			top: percentage(353px/1136px);
+			margin-left: -66px;
+			&.animated{
+				margin-left: -46px;
+			}
+		}
+		.con5-money{
+			@include size(31px, 34px);
+			top: percentage(502px/1136px);
+			margin-left: 43px;
+			&.animated{
+				margin-left: 23px;
+			}
+		}
+		.con5-gift{
+			@include size(36px, 39px);
+			top: percentage(655px/1136px);
+			margin-left: -43px;
+			&.animated{
+				top: percentage(565px/1136px);
+			}
+		}
+	}
+
+	.j-hr-wrap6{
+		.con6-title{
+			@include size(234px, 66px);
+			top: percentage(55px/1136px);
+			margin-left: -117px;
+		}
+		.con6-round{
+			@include size(237px, 237px);
+			top: percentage(253px/1136px);
+			margin-left: -118px;
+		}
+		.con6-diandengpao{
+			@include size(45px, 47px);
+			top: percentage(216px/1136px);
+			margin-left: -141px;
+			&.animated{
+				top: percentage(316px/1136px);
+				margin-left: -121px;
+			}
+		}
+		.con6-jiaoliu{
+			@include size(36px, 46px);
+			top: percentage(188px/1136px);
+			margin-left: 81px;
+			&.animated{
+				top: percentage(248px/1136px);
+				margin-left: 61px;
+			}
+		}
+		.con6-shuju{
+			@include size(40px, 30px);
+			top: percentage(753px/1136px);
+			margin-left: -132px;
+			&.animated{
+				top: percentage(653px/1136px);
+				margin-left: -112px;
+			}
+		}
+		.con6-wenhao{
+			@include size(31px, 43px);
+			top: percentage(683px/1136px);
+			margin-left: 95px;
+			&.animated{
+				top: percentage(623px/1136px);
+				margin-left: 75px;
+			}
+		}
+	}
+
+	.j-hr-wrap7{
+		.con7-title{
+			@include size(229px, 65px);
+			top: percentage(55px/1136px);
+			margin-left: -114px;
+		}
+		.con7-leftmobile{
+			@include size(117px, 240px);
+			top: percentage(248px/1136px);
+			margin-left: -140px;
+			&.animated{
+				margin-left: -110px;
+			}
+		}
+		.con7-rightmobile{
+			@include size(111px, 218px);
+			top: percentage(278px/1136px);
+			margin-left: 30px;
+			&.animated{
+				margin-left: -10px;
+			}
+		}
+		.con7-download-wrap{
+			@include size(100%, 118px);
+			background: #50c1e9;
+			position: absolute;
+			left: 0;
+			//top: percentage(900px/1136px);
+			bottom: 0;
+			.btn-dld{
+				display: block;
+				@include size(148px, 48px);
+				margin: 33px auto;
+			}
+		}
+	}
+
+	#j-godown{
+		width: 100%;
+		height: 75px;
+		background: #fff;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		.icon-godown{
+			@include size(30px, 30px);
+			border: 1px solid #50c1e9;
+			border-top: none;
+			border-left: none;
+			@include transform(rotate(45deg));
+			margin: 15px auto;
+		}
+	}
+ 	#j-mask{
+		display: none;
+		@include size(100%, 100%);
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		background: #aaa;
+ 	}
+
+
+}
+
+	
+
+

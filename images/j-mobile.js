@@ -15,6 +15,129 @@ $(function(){
   if(UA.indexOf('iphone') != -1 && UA.indexOf('micromessenger') != -1 || UA.indexOf('android') != -1 && UA.indexOf('micromessenger') != -1) {
     $('#j-mask').show();
   }
+
+  $(window).scrollTop(0);
+  var nowPage =0;
+  var maxPage = 6;
+  var isFirst = true;
+  var isScroll = false;
+  var hammertime = new Hammer($('.j-main-wrap')[0]);
+  hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+  hammertime.on('swipe', function(ev) {
+    //if(isScroll) return false;
+    var dir = ev.direction;
+    if(dir == 8){
+      switch (nowPage){
+        case 0 : 
+          $('html, body').animate({
+            'scrollTop' : $('.j-hr-wrap2').offset().top
+          }, 500, function(){
+            $('#j-godown').fadeOut(500);
+          });
+          nowPage++;
+          break;
+
+        case 1 : 
+          $('html, body').animate({
+            'scrollTop' : $('.j-hr-wrap3').offset().top
+          }, 500, function(){
+            
+          });
+          nowPage++;
+          break;
+
+        case 2 : 
+          $('html, body').animate({
+            'scrollTop' : $('.j-hr-wrap4').offset().top
+          }, 500, function(){
+            
+          });
+          nowPage++;
+          break;
+
+        case 3 : 
+          $('html, body').animate({
+            'scrollTop' : $('.j-hr-wrap5').offset().top
+          }, 500, function(){
+            
+          });
+          nowPage++;
+          break;
+
+        case 4 : 
+          $('html, body').animate({
+            'scrollTop' : $('.j-hr-wrap6').offset().top
+          }, 500, function(){
+            
+          });
+          nowPage++;
+          break;
+
+        case 5 : 
+          $('html, body').animate({
+            'scrollTop' : $('.j-hr-wrap7').offset().top
+          }, 500, function(){
+            
+          });
+          nowPage++;
+          break;
+      }
+    }else{
+      switch (nowPage){
+        case 6 : 
+          $('html, body').animate({
+            'scrollTop' : $('.j-hr-wrap6').offset().top
+          }, 500, function(){
+           
+          });
+          nowPage--;
+          break;
+
+        case 5 : 
+          $('html, body').animate({
+            'scrollTop' : $('.j-hr-wrap5').offset().top
+          }, 500, function(){
+           
+          });
+          nowPage--;
+          break;
+        case 4 : 
+          $('html, body').animate({
+            'scrollTop' : $('.j-hr-wrap4').offset().top
+          }, 500, function(){
+           
+          });
+          nowPage--;
+          break;
+        case 3 : 
+          $('html, body').animate({
+            'scrollTop' : $('.j-hr-wrap3').offset().top
+          }, 500, function(){
+           
+          });
+          nowPage--;
+          break;
+        case 2 : 
+          $('html, body').animate({
+            'scrollTop' : $('.j-hr-wrap2').offset().top
+          }, 500, function(){
+           
+          });
+          nowPage--;
+          break;
+        case 1 : 
+          $('html, body').animate({
+            'scrollTop' : 0
+          }, 500, function(){
+           
+          });
+          nowPage--;
+          break;
+      }
+    }
+    
+  });
+
   
   $('.hr-logo, .con1-title, .hr-download').addClass('animated');
 
@@ -42,14 +165,6 @@ $(function(){
     $('.con7-leftmobile, .con7-rightmobile, .j-hr-wrap7 .common-hand').addClass('animated');
   }, {offset: 150});
 
-  $(window).bind('touchmove', function(){
-    if(($(window).scrollTop()) > 0){
-      $('#j-godown').fadeOut(1000);
-    }else{
-      $('#j-godown').fadeIn(1000);
-    }
-  });
-
 
 
   //GA
@@ -58,6 +173,12 @@ $(function(){
   });
 
   $('#j-godown').bind('click', function(){
+    $('html, body').animate({
+      'scrollTop' : $('.j-hr-wrap2').offset().top
+    }, 500, function(){
+      $('#j-godown').fadeOut(500);
+    });
+    nowPage = 1;
     _smq.push(['custom','海尔生活家APP推广','Haier-进入下一页箭头']);
   })
 

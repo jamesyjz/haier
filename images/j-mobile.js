@@ -3,7 +3,7 @@ $(function(){
   var winheight = $(window).height();
   var fullheight = $(document).height();
   var IPHONEURL = "https://itunes.apple.com/cn/app/yi-xin-mian-fei-liao-tian/id683688634?mt=8";
-  var ANDROIDURL = "http://yixin.dl.126.net/update/installer/yixin.apk";
+  var ANDROIDURL = "http://www.haier.com/bigfiles/directory/cn/downloadCenter/20141129/bf556433132.apk";
   var UA = navigator.userAgent.toLowerCase();
 
   if(UA.indexOf('iphone') != -1) {
@@ -12,9 +12,6 @@ $(function(){
     $('#j-main-wrap .btn-dld').attr('href', ANDROIDURL);
   }
 
-  if(UA.indexOf('iphone') != -1 && UA.indexOf('micromessenger') != -1 || UA.indexOf('android') != -1 && UA.indexOf('micromessenger') != -1) {
-    $('#j-mask').show();
-  }
 
   $('.hr-logo, .con1-title, .hr-download').addClass('animated');
 
@@ -52,7 +49,16 @@ $(function(){
 
   $('#j-godown').bind('click', function(){
     mySwiper.swipeNext();
+    _smq.push(['custom','海尔生活家APP推广','Haier-进入下一页箭头']);
   })
+
+  //GA 
+  $('#j-main-wrap .btn-dld').bind('click', function(){
+    if(UA.indexOf('android') != -1 && UA.indexOf('micromessenger') != -1) {
+      $('#j-mask').show();
+    }
+    _smq.push(['custom','海尔生活家APP推广','Haier-立即下载button']);
+  });
 
 
 });

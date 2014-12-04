@@ -43,6 +43,12 @@
 html, body{
 	height: 100%;
 }
+html, body, #wrapper, #container, .activity-details-box {
+  height: 100% !important;
+}
+#gotop{
+	display: none!important;
+}
 .position_a{
 	position: absolute;
 	left: 50%;
@@ -91,7 +97,7 @@ html, body{
 		top: percentage(950px/1136px);
 		margin-left: 74px;
 		&.animated{
-			top: percentage(918px/1136px);
+			top: percentage(930px/1136px);
 		}
 		&.re-animated{
 			opacity: 0;
@@ -130,14 +136,14 @@ html, body{
 		background: #50c1e9;
 		.hr-logo{
 			@include size(116px, 112px);
-			top: percentage(86px/516px);
+			top: percentage(106px/516px);
 			margin-left: -158px;
 			&.animated{
 				margin-left: -58px;
 			}
 		}
 		.con1-title{
-			@include size(276px, 15px);
+			@include size(276px, 17px);
 			top: percentage(250px/516px);
 			margin-left: 38px;
 			&.animated{
@@ -146,10 +152,10 @@ html, body{
 		}
 		.hr-download{
 			@include size(148px, 48px);
-			top: percentage(288px/516px);
+			top: percentage(268px/516px);
 			margin-left: -74px;
 			&.animated{
-				top: percentage(328px/516px);
+				top: percentage(308px/516px);
 			}
 		}
 	}
@@ -174,7 +180,7 @@ html, body{
 			top: percentage(907px/1136px);
 			margin-left: -103px;
 			&.animated{
-				top: percentage(827px/1136px);
+				top: percentage(797px/1136px);
 				margin-left: -83px;
 			}
 		}
@@ -217,7 +223,7 @@ html, body{
 		}
 		.con4-car{
 			@include size(62px, 31px);
-			top: percentage(539px/1136px);
+			top: percentage(512px/1136px);
 			margin-left: -40px;
 			&.animated{
 				margin-left: -90px;
@@ -225,7 +231,7 @@ html, body{
 		}
 		.con4-round{
 			@include size(43px, 46px);
-			top: percentage(690px/1136px);
+			top: percentage(670px/1136px);
 			margin-left: -19px;
 			&.animated{
 				@include transform(rotate(180deg));
@@ -233,7 +239,7 @@ html, body{
 		}
 		.con4-round-count{
 			@include size(43px, 46px);
-			top: percentage(690px/1136px);
+			top: percentage(670px/1136px);
 			margin-left: -19px;
 		}
 	}
@@ -270,7 +276,7 @@ html, body{
 		}
 		.con5-money{
 			@include size(31px, 34px);
-			top: percentage(502px/1136px);
+			top: percentage(492px/1136px);
 			margin-left: 43px;
 			&.animated{
 				margin-left: 23px;
@@ -278,10 +284,10 @@ html, body{
 		}
 		.con5-gift{
 			@include size(36px, 39px);
-			top: percentage(655px/1136px);
+			top: percentage(645px/1136px);
 			margin-left: -43px;
 			&.animated{
-				top: percentage(565px/1136px);
+				top: percentage(555px/1136px);
 			}
 		}
 	}
@@ -320,7 +326,7 @@ html, body{
 			top: percentage(753px/1136px);
 			margin-left: -132px;
 			&.animated{
-				top: percentage(653px/1136px);
+				top: percentage(633px/1136px);
 				margin-left: -112px;
 			}
 		}
@@ -329,13 +335,14 @@ html, body{
 			top: percentage(683px/1136px);
 			margin-left: 95px;
 			&.animated{
-				top: percentage(623px/1136px);
+				top: percentage(603px/1136px);
 				margin-left: 75px;
 			}
 		}
 	}
 
 	.j-hr-wrap7{
+		//-webkit-transform: scale(1);
 		.con7-title{
 			@include size(229px, 65px);
 			top: percentage(55px/1136px);
@@ -343,7 +350,7 @@ html, body{
 		}
 		.con7-leftmobile{
 			@include size(117px, 240px);
-			top: percentage(248px/1136px);
+			top: percentage(238px/1136px);
 			margin-left: -140px;
 			&.animated{
 				margin-left: -110px;
@@ -351,24 +358,31 @@ html, body{
 		}
 		.con7-rightmobile{
 			@include size(111px, 218px);
-			top: percentage(278px/1136px);
+			top: percentage(268px/1136px);
 			margin-left: 30px;
 			&.animated{
 				margin-left: -10px;
 			}
 		}
 		.con7-download-wrap{
-			@include size(100%, 118px);
+			@include size(100%, 80px);
 			background: #50c1e9;
 			position: absolute;
 			left: 0;
-			//top: percentage(900px/1136px);
-			bottom: 0;
+			top: 67.22535%;
+			// bottom: 0;
 			.btn-dld{
 				display: block;
 				@include size(148px, 48px);
-				margin: 33px auto;
+				margin: 19px auto;
 			}
+		}
+		.footer-dark{
+			width: 100%;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			padding: 10px 0;
 		}
 	}
 
@@ -402,6 +416,25 @@ html, body{
 
 }
 
+
+@media (max-height: 480px) {
+	.j-main-wrap .common-hand{-webkit-transform: scale(0.8);margin-left:70px;}
+	.j-main-wrap .common-hand.animated{top:78.92958%}
+	.j-main-wrap .j-hr-wrap2 .con2-shopping-cart.animated{top:79.15845%;}
+	.j-main-wrap .j-hr-wrap4 .con4-car{top:52.07042%;}
+	.j-main-wrap .j-hr-wrap4 .con4-round, .j-main-wrap .j-hr-wrap4 .con4-round-count{top:67.97887%;}
+	.j-main-wrap .j-hr-wrap5 .con5-money{top:48.30986%;}
+	.j-main-wrap .j-hr-wrap5 .con5-gift.animated{top:54.85563%;}
+	.j-main-wrap .j-hr-wrap6 .con6-shuju.animated{top:64.72183%;}
+	.j-main-wrap .j-hr-wrap6 .con6-wenhao.animated{top:62.08099%;}
+
+	.j-main-wrap .j-hr-wrap7 .con7-title{-webkit-transform: scale(0.7);top: 2.84155%}
+	.j-main-wrap .j-hr-wrap7 .con7-leftmobile{-webkit-transform: scale(0.7);top: 9.9507%}
+	.j-main-wrap .j-hr-wrap7 .con7-leftmobile.animated{margin-left:-90px;}
+	.j-main-wrap .j-hr-wrap7 .con7-rightmobile{-webkit-transform: scale(0.7);top: 12.59155%;}
+	.j-main-wrap .j-hr-wrap7 .con7-rightmobile.animated{margin-left: -30px;}
+	.j-main-wrap .j-hr-wrap7 .con7-download-wrap{top: 58.22535%;}
+}
 	
 
 

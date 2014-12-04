@@ -7,17 +7,19 @@
         <meta content="black" name="apple-mobile-web-app-status-bar-style" />
         <meta content="telephone=no" name="format-detection" />
         <title>Haier|海尔家电家居 - 美好住居生活解决方案提供商</title>
-		<meta name="description" content="此处按规范填写摘要" />
-		<meta name="keywords" content="此处按规范填写关键字" />
+		<meta name="description" content="海尔生活家" />
+		<meta name="keywords" content="海尔生活家" />
 		<!-- 公用样式 begin -->
 		<!--#include file="/cnmobile/public/public_head/inc_head.shtml"-->
 		<!--#include file="/cnmobile/public/public_foot/inc_foot.shtml"-->
 		<!-- 公用样式 end -->
 		<!--营销活动外部脚本添加区域 start-->
+		<!--<link rel="stylesheet" href="http://image.haier.com/cnmobile/images/base_1.0.0.css">
+		<script type="text/javascript" src="http://image.haier.com/cnmobile/images/base_1.0.0.js"></script>-->
+		<link rel="stylesheet" href="images/idangerous.swiper.css">
 		<link rel="stylesheet" href="images/j-mobile.css">
 		<script type="text/javascript" src="images/jquery-1.5.2.min.js"></script>
-		<script type="text/javascript" src="images/waypoints.min.js"></script>
-		<script type="text/javascript" src="images/hammer.min.js"></script>
+		<script type="text/javascript" src="images/idangerous.swiper.min.js"></script>
 		<script type="text/javascript" src="images/j-mobile.js"></script>
 		<!--营销活动外部脚本添加区域 end-->
 		<script type="text/javascript">
@@ -39,83 +41,120 @@
 	<!--#include file="/cnmobile/public/public_header/right.shtml"-->
 	<!-- END right -->
 	<div id="wrapper">
-	<!--start header-->
-	<!--#include file="/cnmobile/public/public_header/header.shtml"-->
-	<!-- end header -->
+	
 	<link rel="stylesheet" href="http://image.haier.com/cnmobile/images/activity.css">
     <!--中间内容1-->
     <div id="container">
         <div class="activity-details-box">
         	<!--营销活动内容代码填充区域 start-->
-			<div class="j-main-wrap" id="j-main-wrap"> 
-			    <section class="j-hr-wrap j-hr-wrap1">  
-			      <div class="hr-logo position_a opacity0"><img src="images/hr-logo.png" alt="Haier生活家"/></div>
-			      <p class="con1-title position_a opacity0"><img src="images/hr-logo-title.png" alt="一站式智慧生活平台，我的家电生活管家"/></p>
-			      <div class="hr-download position_a">
-			        <a id="J-download" class="btn-dld" href="" title="立即下载">
-			          <img src="images/btn-download.png" alt="立即下载"/>
-			        </a>
-			      </div>
-			    </section>
+			<div class="j-main-wrap" id="j-main-wrap">
+			    <div class="swiper-container">
 
-			    <section class="j-hr-wrap j-hr-wrap2">  
-			      <div class="con2-title position_a"><img src="images/con2-title.png" alt="Haier生活家"/></div>
-			      <div class="con2-products position_a"><img src="images/con2-products.png" alt="Haier生活家"/></div>
-			      <div class="con2-shopping-cart position_a opacity0"><img src="images/con2-shopping-cart.png" alt="Haier生活家"/></div>
-			      <div class="common-mobile position_a"><img src="images/con2-mobile.png" alt="Haier生活家"/></div>
-			      <div class="common-hand position_a"><img src="images/con2-hand.png" alt="Haier生活家"/></div>
-			    </section>
+			      <div class="swiper-wrapper">
 
-			    <section class="j-hr-wrap j-hr-wrap3">  
-			      <div class="con3-title position_a"><img src="images/con3-title.png" alt="Haier生活家"/></div>
-			      <div class="con3-gift position_a"><img src="images/con3-gift.png" alt="Haier生活家"/></div>
-			      <div class="common-mobile position_a"><img src="images/con3-mobile.png" alt="Haier生活家"/></div>
-			      <div class="common-hand position_a opacity0"><img src="images/con2-hand.png" alt="Haier生活家"/></div>
-			    </section>
+			          <div class="j-hr-wrap j-hr-wrap1 swiper-slide"> 
+			          	<!--start header-->
+						<!--#include file="/cnmobile/public/public_header/header.shtml"-->
+						<!-- end header -->
+			            <!-- <header>
+			              <a href="javascript:history.back()" class="goback"></a>
+			              <a href="/cn/" class="gohome"></a>
+			              <h1>最新活动</h1>
+			              <a href="javascript:void(0)" class="navbtn"></a>
+			            </header>  -->
+			            <div class="hr-logo position_a opacity0"><img src="images/hr-logo.png" alt="Haier生活家"/></div>
+			            <p class="con1-title position_a opacity0"><img src="images/hr-logo-title.png" alt="一站式智慧生活平台，我的家电生活管家"/></p>
+			            <div class="hr-download position_a">
+			              <a id="J-download" class="btn-dld" href="" title="立即下载">
+			                <img src="images/btn-download.png" alt="立即下载"/>
+			              </a>
+			            </div>
+			          </div>
 
-			    <section class="j-hr-wrap j-hr-wrap4">  
-			      <div class="con4-title position_a"><img src="images/con4-title.png" alt="Haier生活家"/></div>
-			      <div class="con4-gift-bg position_a"><img src="images/con4-gift-bg.png" alt="Haier生活家"/></div>
-			      <div class="con4-dianbingxiang position_a"><img src="images/con4-dianbingxiang.png" alt="Haier生活家"/></div>
-			      <div class="con4-car position_a"><img src="images/con4-car.png" alt="Haier生活家"/></div>
-			      <div class="con4-round position_a"><img src="images/con4-round.png" alt="Haier生活家"/></div>
-			      <div class="con4-round-count position_a"><img src="images/con4-round-count.png" alt="Haier生活家"/></div>
-			      <div class="common-mobile position_a"><img src="images/con4-mobile.png" alt="Haier生活家"/></div>
-			      <div class="common-hand position_a"><img src="images/con2-hand.png" alt="Haier生活家"/></div>
-			    </section>
+			          <div class="j-hr-wrap j-hr-wrap2 swiper-slide">  
+			            <div class="con2-title position_a"><img src="images/con2-title.png" alt="Haier生活家"/></div>
+			            <div class="con2-products position_a"><img src="images/con2-products.png" alt="Haier生活家"/></div>
+			            <div class="con2-shopping-cart position_a"><img src="images/con2-shopping-cart.png" alt="Haier生活家"/></div>
+			            <div class="common-mobile position_a"><img src="images/con2-mobile.png" alt="Haier生活家"/></div>
+			            <div class="common-hand position_a"><img src="images/con2-hand.png" alt="Haier生活家"/></div>
+			          </div>
 
-			    <section class="j-hr-wrap j-hr-wrap5">  
-			      <div class="con5-title position_a"><img src="images/con5-title.png" alt="Haier生活家"/></div>
-			      <div class="con5-round position_a"><img src="images/con5-round.png" alt="Haier生活家"/></div>
-			      <div class="con5-blueline position_a"><img src="images/con5-blueline.png" alt="Haier生活家"/></div>
-			      <div class="con5-dianbingxiang position_a"><img src="images/con5-dianbingxiang.png" alt="Haier生活家"/></div>
-			      <div class="con5-money position_a"><img src="images/con5-money.png" alt="Haier生活家"/></div>
-			      <div class="con5-gift position_a"><img src="images/con5-gift.png" alt="Haier生活家"/></div>
-			      <div class="common-mobile position_a"><img src="images/con5-mobile.png" alt="Haier生活家"/></div>
-			      <div class="common-hand position_a"><img src="images/con2-hand.png" alt="Haier生活家"/></div>
-			    </section>
+			          <div class="j-hr-wrap j-hr-wrap3 swiper-slide">  
+			            <div class="con3-title position_a"><img src="images/con3-title.png" alt="Haier生活家"/></div>
+			            <div class="con3-gift position_a"><img src="images/con3-gift.png" alt="Haier生活家"/></div>
+			            <div class="common-mobile position_a"><img src="images/con3-mobile.png" alt="Haier生活家"/></div>
+			            <div class="common-hand position_a"><img src="images/con2-hand.png" alt="Haier生活家"/></div>
+			          </div>
 
-			    <section class="j-hr-wrap j-hr-wrap6">  
-			      <div class="con6-title position_a"><img src="images/con6-title.png" alt="Haier生活家"/></div>
-			      <div class="con6-round position_a"><img src="images/con6-round.png" alt="Haier生活家"/></div>
-			      <div class="con6-diandengpao position_a"><img src="images/con6-diandengpao.png" alt="Haier生活家"/></div>
-			      <div class="con6-jiaoliu position_a"><img src="images/con6-jiaoliu.png" alt="Haier生活家"/></div>
-			      <div class="con6-shuju position_a"><img src="images/con6-shuju.png" alt="Haier生活家"/></div>
-			      <div class="con6-wenhao position_a"><img src="images/con6-wenhao.png" alt="Haier生活家"/></div>
-			      <div class="common-mobile position_a"><img src="images/con6-mobile.png" alt="Haier生活家"/></div>
-			      <div class="common-hand position_a"><img src="images/con2-hand.png" alt="Haier生活家"/></div>
-			    </section>
+			          <div class="j-hr-wrap j-hr-wrap4 swiper-slide">  
+			            <div class="con4-title position_a"><img src="images/con4-title.png" alt="Haier生活家"/></div>
+			            <div class="con4-gift-bg position_a"><img src="images/con4-gift-bg.png" alt="Haier生活家"/></div>
+			            <div class="con4-dianbingxiang position_a"><img src="images/con4-dianbingxiang.png" alt="Haier生活家"/></div>
+			            <div class="con4-car position_a"><img src="images/con4-car.png" alt="Haier生活家"/></div>
+			            <div class="con4-round position_a"><img src="images/con4-round.png" alt="Haier生活家"/></div>
+			            <div class="con4-round-count position_a"><img src="images/con4-round-count.png" alt="Haier生活家"/></div>
+			            <div class="common-mobile position_a"><img src="images/con4-mobile.png" alt="Haier生活家"/></div>
+			            <div class="common-hand position_a"><img src="images/con2-hand.png" alt="Haier生活家"/></div>
+			          </div>
 
-			    <section class="j-hr-wrap j-hr-wrap7">  
-			      <div class="con7-title position_a"><img src="images/con7-title.png" alt="Haier生活家"/></div>
-			      <div class="con7-rightmobile position_a"><img src="images/con7-rightmobile.png" alt="Haier生活家"/></div>
-			      <div class="con7-leftmobile position_a"><img src="images/con7-leftmobile.png" alt="Haier生活家"/></div>
-			      <div class="con7-download-wrap">
-			        <a id="foot-download" class="btn-dld" href="" title="立即下载">
-			          <img src="images/btn-download.png" alt="立即下载"/>
-			        </a>
-			      </div>
-			    </section>
+			          <div class="j-hr-wrap j-hr-wrap5 swiper-slide">  
+			            <div class="con5-title position_a"><img src="images/con5-title.png" alt="Haier生活家"/></div>
+			            <div class="con5-round position_a"><img src="images/con5-round.png" alt="Haier生活家"/></div>
+			            <div class="con5-blueline position_a"><img src="images/con5-blueline.png" alt="Haier生活家"/></div>
+			            <div class="con5-dianbingxiang position_a"><img src="images/con5-dianbingxiang.png" alt="Haier生活家"/></div>
+			            <div class="con5-money position_a"><img src="images/con5-money.png" alt="Haier生活家"/></div>
+			            <div class="con5-gift position_a"><img src="images/con5-gift.png" alt="Haier生活家"/></div>
+			            <div class="common-mobile position_a"><img src="images/con5-mobile.png" alt="Haier生活家"/></div>
+			            <div class="common-hand position_a"><img src="images/con2-hand.png" alt="Haier生活家"/></div>
+			          </div>
+
+			          <div class="j-hr-wrap j-hr-wrap6 swiper-slide">  
+			            <div class="con6-title position_a"><img src="images/con6-title.png" alt="Haier生活家"/></div>
+			            <div class="con6-round position_a"><img src="images/con6-round.png" alt="Haier生活家"/></div>
+			            <div class="con6-diandengpao position_a"><img src="images/con6-diandengpao.png" alt="Haier生活家"/></div>
+			            <div class="con6-jiaoliu position_a"><img src="images/con6-jiaoliu.png" alt="Haier生活家"/></div>
+			            <div class="con6-shuju position_a"><img src="images/con6-shuju.png" alt="Haier生活家"/></div>
+			            <div class="con6-wenhao position_a"><img src="images/con6-wenhao.png" alt="Haier生活家"/></div>
+			            <div class="common-mobile position_a"><img src="images/con6-mobile.png" alt="Haier生活家"/></div>
+			            <div class="common-hand position_a"><img src="images/con2-hand.png" alt="Haier生活家"/></div>
+			          </div>
+
+			          <div class="j-hr-wrap j-hr-wrap7 swiper-slide">  
+			            <div class="con7-title position_a"><img src="images/con7-title.png" alt="Haier生活家"/></div>
+			            <div class="con7-rightmobile position_a"><img src="images/con7-rightmobile.png" alt="Haier生活家"/></div>
+			            <div class="con7-leftmobile position_a"><img src="images/con7-leftmobile.png" alt="Haier生活家"/></div>
+			            <div class="con7-download-wrap">
+			              <a id="foot-download" class="btn-dld" href="" title="立即下载">
+			                <img src="images/btn-download.png" alt="立即下载"/>
+			              </a>
+			            </div>
+
+			            <!-- START footer -->
+						<!--#include file="/cnmobile/public/public_footer/inc_footer.shtml"-->
+						<!-- END footer -->
+
+			            <!-- <footer class="footer-dark">
+			              <p class="strong">
+			                <a href="http://m.haier.com/cn/footer/about_haier/">关于海尔</a>
+			                |
+			                <a href="http://m.haier.com/cn/footer/contact/">联系我们</a>   
+			                |
+			                <a href="http://m.haier.com/cn/footer/terms_conditions/">法律声明</a>   
+			                |
+			                <a href="http://m.ehaier.com/" target="_blank">网上商城</a>
+			              </p>
+			              <p>
+			                <a href="http://m.haier.com/">手机版</a>
+			                <a href="http://www.haier.com/cn/">网页版</a>
+			              </p>
+			              <p class="copy">Copyright©2014 海尔集团 版权所有</p>
+			            </footer> -->
+
+			          </div>
+
+			      </div> 
+
+			    </div>
 
 			    <div id="j-godown">
 			      <div class="icon-godown"></div>
